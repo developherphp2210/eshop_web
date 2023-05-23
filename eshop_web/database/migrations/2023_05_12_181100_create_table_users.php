@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('email',50)->unique();
             $table->string('password');            
-            $table->string('piva',11)->default('0');
+            $table->string('piva',11)->nullable();
             $table->string('user_name',50);            
             $table->char('type',1)->default('0');
             $table->rememberToken()->default('0');

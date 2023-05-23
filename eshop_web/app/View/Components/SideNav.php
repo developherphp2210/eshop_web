@@ -10,10 +10,15 @@ class SideNav extends Component
 {
     /**
      * Create a new component instance.
+     * 
+     * @var array
      */
-    public function __construct()
+
+    public $user = '';
+
+    public function __construct($us)
     {
-        //
+        $this->user = $us;
     }
 
     /**
@@ -21,6 +26,6 @@ class SideNav extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.side-nav');
+        return view('components.main.side-nav');
     }
 }

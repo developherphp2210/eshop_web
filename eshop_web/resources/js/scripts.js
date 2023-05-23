@@ -82,4 +82,19 @@
         }
         targetAnchor.classList.add('active');
     });
+    
+
+});
+
+let upload = document.getElementById('uploadFile');
+
+upload.addEventListener('change',function(e){    
+    var selectedFile = e.target.files[0];
+    var reader = new FileReader();    
+    var imgtag = document.getElementById('imgaccount');
+    imgtag.title = selectedFile.name;
+    reader.onload = function (e) {
+        imgtag.src = e.target.result;
+    };
+    reader.readAsDataURL(selectedFile);    
 });

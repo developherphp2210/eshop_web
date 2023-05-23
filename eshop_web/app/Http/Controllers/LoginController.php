@@ -21,8 +21,8 @@ class LoginController extends Controller
         {
             $request->session()->regenerate();  
                         
-            $user = User::where('email',$request->email)->get();                    
-            $request->session()->put('user_id', $user[0]->id);
+            $user = User::where('email',$request->email)->first();                                
+            $request->session()->put('user_id', $user->id);
             
             return view('dashboard.mainpage')->with(['title' => 'Main Page','user' => $user]);
         }

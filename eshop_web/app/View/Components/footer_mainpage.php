@@ -21,6 +21,6 @@ class footer_mainpage extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footer_mainpage');
+        return view('components.main.footer_mainpage');
     }
 }

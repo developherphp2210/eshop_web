@@ -28,6 +28,15 @@ class User extends Authenticatable
         'password',
         'piva',
         'user_name',
-        'type'
+        'type',
+        'firstname',
+        'lastname',
+        'address',
+        'city',
+        'phone',
+        'ragsoc',
+        'cap',
+        'codfisc',
+        'image'
     ];
 }

@@ -16,11 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/dashboard',[AccountController::class,'dash'])->name('dashboard');
-
 Route::get('/account/profile/{page}',[AccountController::class,'show']);
 
+Route::post('/saveaccount/{page}',[AccountController::class,'save']);
